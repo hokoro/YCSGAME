@@ -1,0 +1,30 @@
+.Ycs_head_logo{
+    margin: 2rem 0;
+    font-family: 'Pacifico', cursive;
+}
+.Ycs_Member_logo{
+    margin-left: 5rem;
+    font-family: 'Yuji Hentaigana Akari', cursive;
+}
+.Ycs_Member_list{
+    margin-left: 5rem;
+    font-family: 'Work Sans', sans-serif;
+
+}
+.Ycs_Game_logo{
+    margin-left: 5rem;
+    font-family: 'Yuji Hentaigana Akari', cursive;
+}
+.Ycs_Game_list{
+    margin-left: 5rem;
+    margin-bottom: 50rem;
+    font-family: 'Work Sans', sans-serif;
+}
+.Ycs_footer_logo{
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 2rem;
+}
+.Ycs_footer_button{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 1rem;
+}
