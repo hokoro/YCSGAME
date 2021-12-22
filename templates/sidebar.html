@@ -1,0 +1,54 @@
+<div class="sidenav">
+    <div style="text-align: left">
+            <div class="Ycs_Member_logo">
+                <h2>YCS MEMBER</h2>
+                <ul class="Ycs_Member_list">
+                    <li>
+                        {% if not user.is_authenticated %}
+                            <span class="mx-2">
+                                <a href="{% url 'accountapp:login' %}">
+                                    Login
+                                </a>
+                            </span>
+                        {% else %}
+                            <span class="mx-2">
+                                <a href="{% url 'accountapp:login' %}">
+                                    Logout
+                                </a>
+                            </span>
+
+
+                    </li>
+                        {% endif %}
+                    <li>
+                        <span class="mx-2">
+                            <a href="{% url 'accountapp:create' %}">
+                                Create Account
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="mx-2">
+                            Profile
+                        </span>
+                    </li>
+                    <li>
+                        <span class="mx-2">
+                            Account
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="Ycs_Game_logo">
+                <h2>YCS Game</h2>
+                <ul class="Ycs_Game_list">
+                    <li>
+                        <span class="mx-2">
+                            Room making
+                        </span>
+                    </li>
+                </ul>
+            </div>
+    </div>
+</div>

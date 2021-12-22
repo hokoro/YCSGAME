@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+     <div class = "text-center mw-500 m-auto">
+        <form action="{% url 'accountapp:create' %}" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form%}
+                <div class = "m-5">
+                    <input type = "submit" class="btn btn-dark rounded-pill px-5">
+                </div>
+        </form>
+    </div>
+{% endblock %}

@@ -19,9 +19,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 import mainapp.views
-
 urlpatterns = [
-    path('',mainapp.views.mainpage,name='main'),
+    path('main/',include('mainapp.urls')),
     path('admin/', admin.site.urls),
     path('account/',include('accountapp.urls')),
 
