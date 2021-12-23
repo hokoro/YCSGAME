@@ -9,6 +9,12 @@
                     <a href="{% url 'accountapp:login' %}">
                         Login
                     </a>
+                <br>
+                <span class="mx-2">
+                    <a href="{% url 'accountapp:create' %}">
+                        Create Account
+                    </a>
+                </span>
                 </span>
                 {% else %}
                     <span class="mx-2">
@@ -18,17 +24,17 @@
                     </span>
                     <br>
                     <span class="mx-2">
-                        <a href="{% url 'accountapp:account' pk=user.pk%}">
+                        <a href="{% url 'accountapp:detail' pk=user.pk %}">
                             Account
                         </a>
                     </span>
+                    <br>
+                    <span class="mx-2">
+                        <a href="{% url 'accountapp:update' pk=user.pk %}">
+                            Account Edit
+                        </a>
+                    </span>
                 {% endif %}
-                <br>
-                <span class="mx-2">
-                    <a href="{% url 'accountapp:create' %}">
-                        Create Account
-                    </a>
-                </span>
                 <br>
                 <span class="mx-2">
                     Profile
