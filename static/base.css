@@ -8,21 +8,26 @@
     color:white;
     font-family: 'Yuji Hentaigana Akari', cursive;
 }
-.Ycs_Member_list{
+.Ycs_Member_button{
     font-family: 'Work Sans', sans-serif;
+    color:white;
+    text-align: center;
 }
 .Ycs_Game_logo{
     color:white;
     margin-left: 5rem;
     font-family: 'Yuji Hentaigana Akari', cursive;
 }
-.Ycs_Game_list{
+.Ycs_Game_button{
     font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    color: white;
 }
 .Ycs_footer_logo{
     font-family: 'Pacifico', cursive;
 }
 .Ycs_footer_button{
+
     font-family: 'Noto Sans KR', sans-serif;;
 }
 
