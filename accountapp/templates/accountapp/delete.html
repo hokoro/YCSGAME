@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+        <div class = "text-center mw-500 m-auto">  <!--bootstrap 에서 제공해주는 class-->
+        <div class = "m-5"> <!--margin 5-->
+            <h4>계정을 탈퇴 하시겠습니까?</h4>
+        </div>
+        <div class>
+            <form action = "{% url 'accountapp:delete' pk=target_user.pk %}" method = "post"> {# 타겟 유저는 객체의 고유값 #}
+                {% csrf_token %}
+                <div class = "m-5">
+                    <input type = "submit" class="btn btn-danger rounded-pill px-5">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

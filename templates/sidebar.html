@@ -34,6 +34,12 @@
                             Account Edit
                         </a>
                     </span>
+                    <br>
+                    <span class="mx-2">
+                        <a href="{% url 'accountapp:delete' pk=user.pk %}">
+                            Account Quit
+                        </a>
+                    </span>
                 {% endif %}
                 <br>
                 <span class="mx-2">
