@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'mainapp',
     'profileapp',
+    'friendapp',
 ]
 
 MIDDLEWARE = [
