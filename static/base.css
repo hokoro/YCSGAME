@@ -1,34 +1,32 @@
 .Ycs_head_logo{
     margin: 2rem 0;
-    font-family: 'Pacifico', cursive;
-
+    font-family: 'NanumSquareExtraBold', serif;
 }
 .Ycs_Member_logo{
-    margin-left: 5rem;
+    margin-left: 4rem;
     color:black;
-    font-family: 'Yuji Hentaigana Akari', cursive;
+    font-family: 'NanumSquare', serif;
 }
 .Ycs_Member_button{
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'NanumSquare', serif;
     color:black;
     text-align: center;
 }
 .Ycs_Game_logo{
     color:black;
-    margin-left: 5rem;
-    font-family: 'Yuji Hentaigana Akari', cursive;
+    margin-left: 4rem;
+    font-family: 'NanumSquare', serif;
 }
 .Ycs_Game_button{
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'NanumSquare', serif;
     text-align: center;
     color: black;
 }
 .Ycs_footer_logo{
-    font-family: 'Pacifico', cursive;
+    font-family: 'NanumSquare', serif;
 }
 .Ycs_footer_button{
-
-    font-family: 'Noto Sans KR', sans-serif;;
+    font-family: 'NanumSquare', serif;
 }
 
 .sidenav {
@@ -44,17 +42,19 @@
 }
 
 .Ycs_introduce_title{
+    padding-top: 2rem;
     padding-bottom: 2rem;
-    font-family: 'Yuji Hentaigana Akari', cursive;
+    font-family: 'NanumSquare', serif;
 }
 .Ycs_introduce_paragraph{
-    font-family: 'Ubuntu', sans-serif;
+    padding-bottom: 2rem;
+    font-family: 'NanumSquare', serif;
     font-size: 30px;
 }
 
 a{
     text-decoration: none; /*text 밑줄 없애기*/
-    color: black;
+    color: #1e1e1e;
 }
 a:hover{ /*마우스를 올렸을떄*/
     color: orange;
@@ -73,4 +73,10 @@ a:hover{ /*마우스를 올렸을떄*/
     width : 12rem;
     border-radius: 20rem;
     object-fit: cover;
+}
+p{
+    font-size: 26px;
+}
+.NNS_B{
+    font-family: 'NanumSquare', serif;
 }

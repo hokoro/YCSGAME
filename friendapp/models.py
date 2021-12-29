@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 # 유저 한명당 하나의 친구 목록 모델 만들기
 class FriendList(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='user')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='user') #User = 웹사이트 계정에 모든 정보를 담고 있고 그것과 연결 할려고 1대1 필드를 사용
 
     friends = models.ManyToManyField(User, blank=True, related_name='friends')
 
