@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+{% block content %}
+<div style="text-align: center">
+    <h1>
+        Search
+    </h1>
+
+    <form method="get">
+        <input type="text" name="profile_name">
+        <button type="submit" class="btn btn-primary">
+            조회
+        </button>
+    </form>
+
+   <div>
+        {% for profile in profile_search_result %}
+            <div class="profile_search_image">
+                <img src = "{{ profile.image.url }}" class="profile_image m-4" alt = "profile image">
+            </div>
+            <div class="profile_search_nickname">
+            {{ profile.nickname }}
+            </div>
+            <div class="profile_search_message">
+            {{ profile.message }}
+            </div>
+            <div class="friend_request_button">
+            <button type="submit" class="btn btn-primary" name="request">
+                친구요청
+            </button>
+            </div>
+        {% empty %}
+            <h4>조회된 유저가 없습니다</h4>
+        {% endfor %}
+   </div>
+</div>
+{% endblock %}
