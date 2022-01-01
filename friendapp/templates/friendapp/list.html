@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<div class="text-center">
+{% for profile in profile_friend_result %}
+    {{ profile.user_B.profile.nickname }}
+    {% empty %}
+    <h4>친구가 없습니다</h4>
+{% endfor %}
+</div>
+
+{% endblock %}
