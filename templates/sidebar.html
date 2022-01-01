@@ -31,7 +31,13 @@
                     <br>
                     <span class="mx-2">
                         <a href="{% url 'friendapp:search' username=user.username%}">
-                            Friends
+                            Search Friend
+                        </a>
+                    </span>
+                    <br>
+                    <span class="mx-2">
+                        <a href="{% url 'friendapp:list' pk=user.pk %}">
+                            Friends list
                         </a>
                     </span>
 

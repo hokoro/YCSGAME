@@ -19,10 +19,14 @@ from django.contrib import admin
 from django.urls import path, include
 
 import mainapp.views
+from friendapp.views import send_friend_request, accept_friend_request
+
 urlpatterns = [
     path('main/',include('mainapp.urls')),
     path('admin/', admin.site.urls),
     path('account/',include('accountapp.urls')),
     path('profile/',include('profileapp.urls')),
     path('friend/',include('friendapp.urls')),
+    path('send_friend_request/<int:user_id>/', send_friend_request, name='send friend request'),
+    path('accept_friend_request/<int:request_id>/', accept_friend_request, name='accept friend request'),
 ] +static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

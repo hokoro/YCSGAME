@@ -1,10 +1,11 @@
-from django.conf.urls import url
+
 from django.urls import path
 
-from friendapp.views import FriendSearchView
+from friendapp import views
+from friendapp.views import FriendSearchView, FriendListView, send_friend_request, accept_friend_request
 
 app_name = 'friendapp'
 urlpatterns = [
     path('search/?search=<str:username>',FriendSearchView.as_view(),name='search'),
-    # path('request/(?P<username>[\w.@+-]+)',AddFriend.as_view(),name='request'),
+    path('list/<int:pk>',FriendListView.as_view(),name='list'),
 ]

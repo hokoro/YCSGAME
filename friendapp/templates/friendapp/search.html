@@ -3,35 +3,54 @@
 {% load bootstrap4 %}
 {% block content %}
 <div style="text-align: center">
-    <h1>
-        Search
-    </h1>
-
-    <form method="get">
-        <input type="text" name="profile_name">
-        <button type="submit" class="btn btn-primary">
-            조회
-        </button>
-    </form>
-
-   <div>
-        {% for profile in profile_search_result %}
-            <div class="profile_search_image">
-                <img src = "{{ profile.image.url }}" class="profile_image m-4" alt = "profile image">
-            </div>
-            <div class="profile_search_nickname">
-            {{ profile.nickname }}
-            </div>
-            <div class="profile_search_message">
-            {{ profile.message }}
-            </div>
-            <div class="friend_request_button">
-            <button type="submit" class="btn btn-primary" name="request">
-                친구요청
+    <div class="Search_Title">
+        <h1>
+            Search
+        </h1>
+    </div>
+    <div class="Search_Form">
+        <form method="get">
+            <input type="text" name="profile_name">
+            <button type="submit" class="btn btn-primary">
+                조회
             </button>
-            </div>
-        {% empty %}
-            <h4>조회된 유저가 없습니다</h4>
+        </form>
+    </div>
+   <div class="Search_Result">
+        {% for profile in profile_search_result %}
+            <form action="/user/{{ user.pk }}/" method="post">
+            {% csrf_token %}
+                <div class="profile_search_image">
+                     <img src = "{{ profile.image.url }}" class="profile_image m-4" alt = "profile image">
+                </div>
+                <div class="profile_search_nickname">
+                    <h5>
+                        {{ profile.nickname }}
+                    </h5>
+                </div>
+                <div class="profile_search_message">
+                    <h5>
+                        {{ profile.message }}
+                    </h5>
+                </div>
+                <div class="friend_request_button">
+                    {% if profile.user.pk != user.pk %}
+                      <button class="btn btn-primary">
+                            <a href="/send_friend_request/{{ profile.user.pk }}/">
+                                친구요청
+                            </a>
+                      </button>
+                    {% else %}
+                        <button class="btn btn-danger">
+                            <a href="{% url 'mainapp:mainpage' %}">
+                                친구 요청을 보낼수가 없습니다
+                            </a>
+                        </button>
+                    {% endif %}
+                </div>
+            </form>
+            {% empty %}
+            <h5>조회된 사용자가 없습니다.</h5>
         {% endfor %}
    </div>
 </div>

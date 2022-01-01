@@ -153,3 +153,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = reverse_lazy('mainapp:mainpage')  # 로그인을 했을시 재연결 시킬
 LOGOUT_REDIRECT_URL = reverse_lazy('accountapp:login')  # 로그아웃 시킬시 재연결
+
+# 세션 자동 로그 아웃 설정
+SESSION_COOKIE_AGE = 3600
+SESSION_SAVE_EVERY_REQUEST = True
+
+# 세션 로그인 상태 유지
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
